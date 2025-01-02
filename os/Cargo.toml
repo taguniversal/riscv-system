@@ -1,0 +1,21 @@
+[package]
+name = "os"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+riscv = "0.10.1"
+embedded-hal = "0.2.7"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[features]
+unstable = []
+
+[package.metadata]
+cargo-features = ["nightly"]  # And this
+
